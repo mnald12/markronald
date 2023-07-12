@@ -1,0 +1,96 @@
+@font-face {
+    font-family: KGHowManyTimes;
+    src: url(../font/KGHowManyTimes.ttf);
+}
+
+@font-face {
+    font-family: Oswald-Regular;
+    src: url(../font/Oswald-Regular.ttf);
+}
+
+.page-left {
+    position: relative;
+}
+
+.about-content {
+    width: 500px;
+    height: auto;
+    position: relative;
+    overflow-x: hidden;
+    background: transparent;
+}
+
+.about-content .content-group {
+    margin-top: 20px;
+}
+
+.about-content .content-group h3 {
+    font-family: Oswald-Regular;
+    font-size: 60px;
+    background: transparent;
+    padding: 0;
+    color: black;
+    text-shadow: 0 1px 1px yellow, 0 2px 2px black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: toRight 1s ease-in-out;
+}
+
+.about-content .content-group h4 {
+    padding: 10px;
+    padding-left: 30px;
+    font-weight: 500;
+}
+
+.buttons {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-top: 12px;
+    padding-bottom: 10px;
+}
+
+.buttons button {
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 6px;
+    background-color: black;
+    color: white;
+    margin-right: 10px;
+}
+
+.buttons button:hover {
+    box-shadow: 1px 1px 2px yellow, 3px 3px 5px black;
+    transform: translateY(-2px);
+}
+
+.heading1 {
+    animation: toRight 0.7s ease-in-out;
+    position: relative;
+}
+
+.heading2 {
+    animation: toRight 0.9s ease-in-out;
+}
+
+.heading3 {
+    animation: toRight 1.1s ease-in-out;
+}
+
+.heading4 {
+    animation: toRight 1.3s ease-in-out;
+}
+
+@keyframes toRight {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

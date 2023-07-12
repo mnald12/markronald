@@ -1,0 +1,106 @@
+.navbar {
+    width: 98%;
+    height: auto;
+    background: white;
+    padding: 4px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .nav-brand {
+    width: 30%;
+    height: auto;
+}
+
+.navbar .nav-brand img {
+    width: 220px;
+    height: 100%;
+}
+
+.navbar .nav-actions {
+    width: 70%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.navbar .nav-actions .nav-btn {
+    border-radius: 4px;
+}
+
+.navbar .nav-actions .nav-btn a {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: black;
+    font-size: small;
+    box-shadow: 0 0 2px 0 black;
+    padding: 6px 10px;
+    background-color: white;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow: hidden;
+    transition: 0.80s;
+}
+
+.navbar .nav-actions .nav-btn a span {
+    font-size: normal;
+}
+
+.navbar .nav-actions .nav-btn a:hover {
+    background-color: black;
+    color: white;
+}
+
+.navbar .nav-actions .nav-btn a:hover .icon {
+    color: yellow;
+    animation: decay 0.8s ease-in-out;
+}
+
+.navbar .nav-actions .nav-btn a:hover span {
+    animation: toLeft 2s ease;
+}
+
+@keyframes toLeft {
+    0% {
+        transform: translateX(120%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes decay {
+
+    0%,
+    100% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        color: transparent;
+    }
+
+    79% {
+        color: white;
+    }
+
+    80% {
+        transform: translateY(60px);
+    }
+}

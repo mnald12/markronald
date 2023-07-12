@@ -1,0 +1,106 @@
+@font-face {
+    font-family: Oswald-Bold;
+    src: url(../font/orbicula.ttf);
+}
+
+@font-face {
+    font-family: orbicula;
+    src: url(../font/Oswald-Bold.ttf);
+}
+
+@font-face {
+    font-family: Oswald-Regular;
+    src: url(../font/Oswald-Regular.ttf);
+}
+
+.sidebar {
+    position: fixed;
+    width: auto;
+    height: 100%;
+    padding: 12px;
+    left: 0;
+    top: 0;
+}
+
+.sidebar .button-lists {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+
+.sidebar .button-lists button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: Oswald-Regular;
+    font-size: large;
+    padding: 6px 10px;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.sidebar .button-lists button.active {
+    color: white;
+    background-color: black;
+}
+
+
+.sidebar .button-lists button.active .icon {
+    color: yellow;
+    animation: moveUp 0.8s ease-in-out;
+    background-color: black;
+}
+
+@keyframes moveUp {
+
+    0%,
+    100% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        color: transparent;
+    }
+
+    79% {
+        color: white;
+    }
+
+    80% {
+        transform: translateY(60px);
+    }
+}
+
+
+.sidebar .button-lists button:hover {
+    gap: 10px;
+    box-shadow: 0 0 3px 0 black;
+    color: black;
+}
+
+.sidebar .button-lists button:hover .icon {
+    width: auto;
+}
+
+.sidebar .button-lists button div {
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.sidebar .button-lists button.active div {
+    color: white !important;
+}
+
+.sidebar .button-lists button:hover div {
+    width: auto;
+}
