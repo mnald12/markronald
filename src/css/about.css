@@ -68,20 +68,20 @@
     transform: translateY(-2px);
 }
 
-.heading1 {
+.heading0 {
     animation: toRight 0.7s ease-in-out;
     position: relative;
 }
 
-.heading2 {
+.heading1 {
     animation: toRight 0.9s ease-in-out;
 }
 
-.heading3 {
+.heading2 {
     animation: toRight 1.1s ease-in-out;
 }
 
-.heading4 {
+.heading3 {
     animation: toRight 1.3s ease-in-out;
 }
 

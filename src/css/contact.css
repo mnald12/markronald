@@ -138,6 +138,10 @@ li.actives p {
     box-shadow: 1px 1px 2px black;
 }
 
+.contact .contact-form button:disabled {
+    opacity: 0.4;
+}
+
 
 .contact .contact-form button:hover {
     box-shadow: 1px 1px 2px yellow, 3px 3px 5px black;

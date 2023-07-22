@@ -5,6 +5,7 @@ import { SiGmail, SiTelegram, SiSkype } from "react-icons/si";
 import { BiMailSend, BiSolidCopy } from "react-icons/bi";
 import { FaMobileButton } from "react-icons/fa6";
 import { useEffect } from 'react';
+
 const Contact = () => {
 
     const copy = (text, id) => {
@@ -27,22 +28,25 @@ const Contact = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [msg, setMsg] = useState('')
+    const [btnDisabled, setBtnDisabled] = useState(false)
 
     const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
-
+        setBtnDisabled(true)
         emailjs.sendForm('service_manmxhm', 'template_mjdoi5b', form.current, 'W4QLjciGHEj19CYT5')
             .then((result) => {
                 setName('')
                 setEmail('')
                 setMsg('')
+                setBtnDisabled(false)
                 document.getElementById('msg-alert').style.display = 'block'
                 setTimeout(() => document.getElementById('msg-alert').style.display = 'none', 2000)
             }, (error) => {
                 console.log(error.text);
-            });
+            }
+            );
     };
 
     return (
@@ -76,14 +80,14 @@ const Contact = () => {
                             <div className="contact-form">
                                 <p id='msg-alert' className='msg-alert'>Success! Thank you for your message.</p>
                                 <form ref={form} onSubmit={sendEmail}>
-                                    <input name="user_name" type='text' value={name} onChange={(e) => setName(e.target.value)} placeholder="enter your name" />
+                                    <input name="user_name" type='text' value={name} onChange={(e) => setName(e.target.value)} placeholder="enter your name" required />
                                     <br />
-                                    <input name="user_email" type='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder="enter your email" />
+                                    <input name="user_email" type='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder="enter your email" required />
                                     <br />
-                                    <textarea name="message" placeholder='enter your message' value={msg} onChange={(e) => setMsg(e.target.value)}></textarea>
+                                    <textarea name="message" placeholder='enter your message' value={msg} onChange={(e) => setMsg(e.target.value)} required></textarea>
                                     <br />
                                     <div className='d-flex-right'>
-                                        <button>Send <BiMailSend className='send' /> </button>
+                                        <button disabled={btnDisabled}>Send <BiMailSend className='send' /> </button>
                                     </div>
                                 </form>
                             </div>
