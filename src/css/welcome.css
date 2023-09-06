@@ -32,3 +32,10 @@
     font-size: 17px;
     margin-top: 17px;
 }
+
+@media (max-width: 665px) {
+    .big-text {
+        font-size: 26px !important;
+        line-height: normal !important;
+    }
+}
