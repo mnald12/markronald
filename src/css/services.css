@@ -1,14 +1,22 @@
-.about {
+.services {
     width: 100%;
     height: auto;
     padding: 20px 30px;
 }
 
-.about h3 {
+.services h3 {
     font-family: KGHowManyTimes;
     font-size: 60px;
 }
 
-.about p {
+.services .service {
+    margin: 12px 0;
+}
+
+.services h4 {
+    font-size: 22px;
+}
+
+.services p {
     font-size: 18px;
 }

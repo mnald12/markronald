@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Nav from './components/Nav';
-import Sidebar from './components/Sidebar';
 import About from './pages/About';
-import Skills from './pages/Skills';
-import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import Loader from './pages/Loader';
-
+import Welcome from './components/Welcome';
+import Projects from './components/Projects';
+import Testimonials from './components/Testimonials';
 const Data = React.createContext(null)
 
 function App() {
@@ -25,14 +23,16 @@ function App() {
   }, [isLoader])
 
   return (
-    <Data.Provider value={{ sidebarActive, setSidebarActive, setIsLoader }}>
-      <Nav />
-      {sidebarActive === 'about' ? isLoader ? <Loader /> : <About /> : ''}
-      {sidebarActive === 'skill' ? isLoader ? <Loader /> : <Skills /> : ''}
-      {sidebarActive === 'project' ? isLoader ? <Loader /> : <Projects /> : ''}
-      {sidebarActive === 'contact' ? isLoader ? <Loader /> : <Contact /> : ''}
-      <Sidebar />
-    </Data.Provider>
+    <div className='App'>
+      <Data.Provider value={{ sidebarActive, setSidebarActive, setIsLoader }}>
+        <Nav />
+        <Welcome />
+        <About />
+        <Projects />
+        <Testimonials />
+        <Contact />
+      </Data.Provider>
+    </div>
   )
 }
 

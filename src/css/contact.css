@@ -1,9 +1,26 @@
 .contact {
-    width: 500px;
+    width: 100%;
+    padding: 20px;
     height: auto;
 }
 
+.contact-heading {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.contact-heading h3 {
+    font-family: KGHowManyTimes;
+    font-size: 60px;
+}
+
+.contact-heading p {
+    font-size: 18px;
+}
+
 .contact .contacts {
+    width: auto;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -22,6 +39,7 @@
     width: 25%;
     height: auto;
     background: #ffdd59;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     border-radius: 10px;
     padding: 40px;
 }
@@ -72,6 +90,28 @@
     border-radius: 5px;
 }
 
+.contact li a {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background: #000000;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: normal;
+    font-weight: bolder;
+    position: absolute;
+    bottom: -12px;
+    left: auto;
+    display: inline-flex;
+    align-items: center;
+    transition: 1s;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
 .contact li:hover,
 li.actives {
     transform: translateY(-3px);
@@ -89,6 +129,11 @@ li.actives button {
     opacity: 1;
 }
 
+.contact li:hover a,
+li.actives a {
+    opacity: 1;
+}
+
 .contact li:hover p,
 li.actives p {
     opacity: 1;
@@ -103,6 +148,7 @@ li.actives p {
     outline: none;
     margin: 10px 0;
     border: 1px solid black;
+    transition: 0.3s;
 }
 
 .contact .contact-form textarea {
@@ -114,6 +160,12 @@ li.actives p {
     outline: none;
     margin: 10px 0;
     border: 1px solid black;
+    transition: 0.3s;
+}
+
+.contact .contact-form input:focus,
+.contact .contact-form textarea:focus {
+    font-size: 18px;
 }
 
 .d-flex-right {

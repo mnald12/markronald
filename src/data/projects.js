@@ -1,5 +1,11 @@
 export const projects = [
     {
+        projectName: 'J.G Crystal King',
+        type: 'Website',
+        projectImage: 'jgcrystalking.png',
+        languages: ['HTML', 'CSS', 'JS', 'React.js']
+    },
+    {
         projectName: 'MARK RONALD',
         type: 'PORTFOLIO',
         projectImage: 'markronald.png',

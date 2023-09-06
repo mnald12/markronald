@@ -1,0 +1,18 @@
+.testimonials {
+    width: 100%;
+    height: auto;
+    padding: 0 30px;
+}
+
+.testimonials .testi {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+.testimonials .testi h3 {
+    font-size: 40px;
+    transform: translateY(-4px);
+}
